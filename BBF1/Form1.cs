@@ -10,7 +10,9 @@ namespace BBF1
 		private PseudoRandomString pseudoRandomString;
 		private SaveFileDialog sfd;
 		private StreamWriter bw;
-		private TestCzestosci tD;
+		private TestCzestosci tCz;
+		private TestDwubitowy tD;
+		private TestSerii tS;
 
 		public Form1()
 		{
@@ -48,7 +50,7 @@ namespace BBF1
 			pseudoRandomString.GenerateString();
 			string path = sfd.FileName;
 			bw = new StreamWriter(sfd.FileName, append: true);
-			bw.WriteLine("p: "+txtBoxFirstPrime.Text);
+			bw.WriteLine("p: " + txtBoxFirstPrime.Text);
 			bw.WriteLine("q: " + txtBoxSecoundPrime.Text);
 			bw.WriteLine("m: " + txtBoxBlumeNumber.Text);
 			bw.WriteLine("s: " + txtSeedNumber.Text);
@@ -60,11 +62,42 @@ namespace BBF1
 		{
 			//btnGenerate_Click(sender, e);
 			//btnGenerateRandomString_Click(sender, e);
-			tD = new TestCzestosci();
-			tD.Fuu(pseudoRandomString.list);
+			tCz = new TestCzestosci();
+			tCz.Fuu(pseudoRandomString.list);
 			bw = new StreamWriter(sfd.FileName, append: true);
-			bw.WriteLine(tD.sum);
+			bw.WriteLine(tCz.sum);
 			bw.Dispose();
+		}
+
+		private void btnTestDwubitowy_Click(object sender, EventArgs e)
+		{
+			tD = new TestDwubitowy();
+			tD.Foo(pseudoRandomString.list);
+			bw = new StreamWriter(sfd.FileName, append: true);
+			bw.WriteLine(tD.suma + " " + tD.sumb + " " + tD.sumc + " " + tD.sumd);
+			bw.Dispose();
+		}
+
+		private void btnTestSerii_Click(object sender, EventArgs e)
+		{
+			tS = new TestSerii();
+			tS.Fuu(pseudoRandomString.list);
+			bw = new StreamWriter(sfd.FileName, append: true);
+			bw.WriteLine(tS.sum1 + " " + tS.sum2 + " " + tS.sum3 + " " + tS.sum4 
+				+ " " + tS.sum5 + " " + tS.sum6andmore);
+			bw.Dispose();
+		}
+
+		private void btn10xAllTests_Click(object sender, EventArgs e)
+		{
+			for (int i = 0; i < 10; i++)
+			{
+				btnGenerate_Click(sender, e);
+				btnGenerateRandomString_Click(sender, e);
+				btnTestCzestosci_Click(sender, e);
+				btnTestDwubitowy_Click(sender, e);
+				btnTestSerii_Click(sender, e);
+			}
 		}
 	}
 }

@@ -43,6 +43,9 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnGenerateRandomString = new System.Windows.Forms.Button();
 			this.btnTestCzestosci = new System.Windows.Forms.Button();
+			this.btnTestDwubitowy = new System.Windows.Forms.Button();
+			this.btnTestSerii = new System.Windows.Forms.Button();
+			this.btn10xAllTests = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -68,7 +71,7 @@
 			// 
 			// btnGenerate
 			// 
-			this.btnGenerate.Location = new System.Drawing.Point(14, 135);
+			this.btnGenerate.Location = new System.Drawing.Point(10, 145);
 			this.btnGenerate.Name = "btnGenerate";
 			this.btnGenerate.Size = new System.Drawing.Size(75, 23);
 			this.btnGenerate.TabIndex = 11;
@@ -185,11 +188,44 @@
 			this.btnTestCzestosci.UseVisualStyleBackColor = true;
 			this.btnTestCzestosci.Click += new System.EventHandler(this.btnTestCzestosci_Click);
 			// 
+			// btnTestDwubitowy
+			// 
+			this.btnTestDwubitowy.Location = new System.Drawing.Point(362, 51);
+			this.btnTestDwubitowy.Name = "btnTestDwubitowy";
+			this.btnTestDwubitowy.Size = new System.Drawing.Size(194, 23);
+			this.btnTestDwubitowy.TabIndex = 3;
+			this.btnTestDwubitowy.Text = "TestDwubitowy";
+			this.btnTestDwubitowy.UseVisualStyleBackColor = true;
+			this.btnTestDwubitowy.Click += new System.EventHandler(this.btnTestDwubitowy_Click);
+			// 
+			// btnTestSerii
+			// 
+			this.btnTestSerii.Location = new System.Drawing.Point(362, 80);
+			this.btnTestSerii.Name = "btnTestSerii";
+			this.btnTestSerii.Size = new System.Drawing.Size(194, 23);
+			this.btnTestSerii.TabIndex = 4;
+			this.btnTestSerii.Text = "TestSerii";
+			this.btnTestSerii.UseVisualStyleBackColor = true;
+			this.btnTestSerii.Click += new System.EventHandler(this.btnTestSerii_Click);
+			// 
+			// btn10xAllTests
+			// 
+			this.btn10xAllTests.Location = new System.Drawing.Point(696, 246);
+			this.btn10xAllTests.Name = "btn10xAllTests";
+			this.btn10xAllTests.Size = new System.Drawing.Size(75, 23);
+			this.btn10xAllTests.TabIndex = 5;
+			this.btn10xAllTests.Text = "10xAllTests";
+			this.btn10xAllTests.UseVisualStyleBackColor = true;
+			this.btn10xAllTests.Click += new System.EventHandler(this.btn10xAllTests_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btn10xAllTests);
+			this.Controls.Add(this.btnTestSerii);
+			this.Controls.Add(this.btnTestDwubitowy);
 			this.Controls.Add(this.btnTestCzestosci);
 			this.Controls.Add(this.btnGenerateRandomString);
 			this.Controls.Add(this.groupBox1);
@@ -218,6 +254,9 @@
 		private System.Windows.Forms.Button btnGenerate;
 		private System.Windows.Forms.Button btnGenerateRandomString;
 		private System.Windows.Forms.Button btnTestCzestosci;
+		private System.Windows.Forms.Button btnTestDwubitowy;
+		private System.Windows.Forms.Button btnTestSerii;
+		private System.Windows.Forms.Button btn10xAllTests;
 	}
 }
 
