@@ -58,7 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PseudoRandomString.cs" />
     <Compile Include="TestCzestosci.cs" />
+    <Compile Include="TestDlugiejSerii.cs" />
     <Compile Include="TestDwubitowy.cs" />
+    <Compile Include="TestPokerowy.cs" />
     <Compile Include="TestSerii.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

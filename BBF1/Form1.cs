@@ -13,6 +13,8 @@ namespace BBF1
 		private TestCzestosci tCz;
 		private TestDwubitowy tD;
 		private TestSerii tS;
+		private TestDlugiejSerii tDS;
+		private TestPokerowy tP;
 
 		public Form1()
 		{
@@ -97,7 +99,33 @@ namespace BBF1
 				btnTestCzestosci_Click(sender, e);
 				btnTestDwubitowy_Click(sender, e);
 				btnTestSerii_Click(sender, e);
+				btnTestDlugiejSerii_Click(sender, e);
 			}
+		}
+
+		private void btnTestDlugiejSerii_Click(object sender, EventArgs e)
+		{
+			tDS = new TestDlugiejSerii();
+			tDS.Fuu(pseudoRandomString.list);
+			bw = new StreamWriter(sfd.FileName, append: true);
+			bw.WriteLine(tDS.suma);
+			bw.Dispose();
+		}
+
+		private void btnTestPokerowy_Click(object sender, EventArgs e)
+		{
+			tP = new TestPokerowy();
+			tP.Fuu(pseudoRandomString.list);
+			bw = new StreamWriter(sfd.FileName, append: true);
+			bw.WriteLine("0000: {0}, 0001: {1}, 0010: {2}, 0011: {3}, " +
+						"0100: {4}, 0101: {5}, 0110: {6}, 0111: {7}, " +
+						"1000: {8}, 1001: {9}, 1010: {10}, 1011: {11}, " +
+						"1100: {12}, 1101: {13}, 1110: {14}, 1111: {15}",
+						tP.suma0000,tP.suma0001,tP.suma0010,tP.suma0011,
+						tP.suma0100,tP.suma0101,tP.suma0110,tP.suma0111,
+						tP.suma1000, tP.suma1001, tP.suma1010, tP.suma1011,
+						tP.suma1100, tP.suma1101, tP.suma1110, tP.suma1111);
+			bw.Dispose();
 		}
 	}
 }

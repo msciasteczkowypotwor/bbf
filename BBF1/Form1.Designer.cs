@@ -46,6 +46,8 @@
 			this.btnTestDwubitowy = new System.Windows.Forms.Button();
 			this.btnTestSerii = new System.Windows.Forms.Button();
 			this.btn10xAllTests = new System.Windows.Forms.Button();
+			this.btnTestDlugiejSerii = new System.Windows.Forms.Button();
+			this.btnTestPokerowy = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -218,11 +220,33 @@
 			this.btn10xAllTests.UseVisualStyleBackColor = true;
 			this.btn10xAllTests.Click += new System.EventHandler(this.btn10xAllTests_Click);
 			// 
+			// btnTestDlugiejSerii
+			// 
+			this.btnTestDlugiejSerii.Location = new System.Drawing.Point(362, 111);
+			this.btnTestDlugiejSerii.Name = "btnTestDlugiejSerii";
+			this.btnTestDlugiejSerii.Size = new System.Drawing.Size(194, 23);
+			this.btnTestDlugiejSerii.TabIndex = 6;
+			this.btnTestDlugiejSerii.Text = "TestDlugiejSerii";
+			this.btnTestDlugiejSerii.UseVisualStyleBackColor = true;
+			this.btnTestDlugiejSerii.Click += new System.EventHandler(this.btnTestDlugiejSerii_Click);
+			// 
+			// btnTestPokerowy
+			// 
+			this.btnTestPokerowy.Location = new System.Drawing.Point(362, 140);
+			this.btnTestPokerowy.Name = "btnTestPokerowy";
+			this.btnTestPokerowy.Size = new System.Drawing.Size(194, 23);
+			this.btnTestPokerowy.TabIndex = 7;
+			this.btnTestPokerowy.Text = "TestPokerowy";
+			this.btnTestPokerowy.UseVisualStyleBackColor = true;
+			this.btnTestPokerowy.Click += new System.EventHandler(this.btnTestPokerowy_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnTestPokerowy);
+			this.Controls.Add(this.btnTestDlugiejSerii);
 			this.Controls.Add(this.btn10xAllTests);
 			this.Controls.Add(this.btnTestSerii);
 			this.Controls.Add(this.btnTestDwubitowy);
@@ -257,6 +281,8 @@
 		private System.Windows.Forms.Button btnTestDwubitowy;
 		private System.Windows.Forms.Button btnTestSerii;
 		private System.Windows.Forms.Button btn10xAllTests;
+		private System.Windows.Forms.Button btnTestDlugiejSerii;
+		private System.Windows.Forms.Button btnTestPokerowy;
 	}
 }
 

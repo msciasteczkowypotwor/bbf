@@ -23,5 +23,11 @@ namespace BBF1
 				}
 			}
 		}
+		public bool Spr2000()
+		{
+			if (sum > 9725 && sum < 10275)
+				return true;
+			return false;
+		}
 	}
 }

@@ -60,5 +60,34 @@ namespace BBF1
 				pomsum = 0;
 			}
 		}
+		public bool Spr2000()
+		{
+			int sum1_a = 2315;
+			int sum1_b = 2684;
+
+			int sum2_a = 1114;
+			int sum2_b = 1383;
+
+			int sum3_a = 527;
+			int sum3_b = 723;
+
+			int sum4_a = 240;
+			int sum4_b = 384;
+
+			int sum5_a = 103;
+			int sum5_b = 209;
+
+			int sum6andmore_a = 103;
+			int sum6andmore_b = 209;
+
+			if (sum1 >= sum1_a && sum1 <= sum1_b &&
+				sum2 >= sum2_a && sum2 <= sum2_b &&
+				sum3 >= sum3_a && sum3 <= sum3_b &&
+				sum4 >= sum4_a && sum4 <= sum4_b &&
+				sum5 >= sum5_a && sum5 <= sum5_b &&
+				sum6andmore >= sum6andmore_a && sum6andmore <= sum6andmore_b)
+				return true;
+			return false;
+		}
 	}
 }
