@@ -5,14 +5,14 @@ namespace BBF1
 {
 	class PrimeGenerator
 	{
-		public uint rangeFrom;
-		public uint rangeTo;
-		public uint firstPrime;
-		public uint secoundPrime;
-		public uint s;
-		public uint m;
+		public ulong rangeFrom;
+		public ulong rangeTo;
+		public ulong firstPrime;
+		public ulong secoundPrime;
+		public ulong s;
+		public ulong m;
 		ArrayList list = new ArrayList();
-		public PrimeGenerator(uint rangeFrom, uint rangeTo)
+		public PrimeGenerator(ulong rangeFrom, ulong rangeTo)
 		{
 			this.rangeFrom = rangeFrom;
 			this.rangeTo = rangeTo;
@@ -23,7 +23,7 @@ namespace BBF1
 
 		private void SetList()
 		{
-			for(uint i = this.rangeFrom; i <= this.rangeTo; i++)
+			for(ulong i = this.rangeFrom; i <= this.rangeTo; i++)
 			{
 				if (IsPrime(i) && IsKongruent(i))
 				{
@@ -31,7 +31,7 @@ namespace BBF1
 				}
 			}
 		}
-		private bool IsPrime(uint number)
+		private bool IsPrime(ulong number)
 		{
 			if (number == 2)
 				return true;
@@ -41,8 +41,8 @@ namespace BBF1
 				return false;
 			if (number % 3 == 0)
 				return false;
-			int i = 5;
-			int w = 2;
+			ulong i = 5;
+			ulong w = 2;
 
 			while (i * i <= number)
 			{
@@ -53,7 +53,7 @@ namespace BBF1
 			}
 			return true;
 		}
-		private bool IsKongruent(uint number)
+		private bool IsKongruent(ulong number)
 		{
 			if ((number - 3)%4 == 0)
 				return true;
@@ -64,8 +64,8 @@ namespace BBF1
 			Random rnd = new Random();
 			do
 			{
-				this.firstPrime = (uint)this.list[rnd.Next(0, this.list.Count)];
-				this.secoundPrime = (uint)this.list[rnd.Next(0, this.list.Count)];
+				this.firstPrime = (ulong)this.list[rnd.Next(0, this.list.Count)];
+				this.secoundPrime = (ulong)this.list[rnd.Next(0, this.list.Count)];
 			}
 			while (this.firstPrime == this.secoundPrime);
 
@@ -73,8 +73,17 @@ namespace BBF1
 		private void SetMandS()
 		{
 			this.m = this.firstPrime * secoundPrime;
-			Random rnd = new Random();
-			this.s = (uint)(2 * rnd.Next((int)(m / 3), (int)(m / 2 - 1)));
+
+			this.s = Get64BitRandom(1, m-1);
 		}
+		private ulong Get64BitRandom(ulong minValue, ulong maxValue)
+		{
+			// Get a random array of 8 bytes. 
+			// As an option, you could also use the cryptography namespace stuff to generate a random byte[8]
+			byte[] buffer = new byte[sizeof(ulong)];
+			rnd.NextBytes(buffer);
+			return BitConverter.ToUInt64(buffer, 0) % (maxValue - minValue + 1) + minValue;
+		}
+		private readonly Random rnd = new Random();
 	}
 }

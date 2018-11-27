@@ -9,7 +9,7 @@ namespace BBF1
 	class TestDlugiejSerii
 	{
 		public int suma = 0;
-		public void Fuu(int[] a)
+		public void Fuu(ulong[] a)
 		{
 			int pom = 0;
 			int pom1 = 0;

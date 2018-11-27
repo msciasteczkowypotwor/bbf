@@ -15,7 +15,7 @@ namespace BBF1
 		public int sum5 = 0;
 		public int sum6andmore = 0;
 
-		public void Fuu(int[] a)
+		public void Fuu(ulong[] a)
 		{
 			int pom = 0;
 			int pom1 = 0;
@@ -25,12 +25,12 @@ namespace BBF1
 				pom1 = pom;
 				int pomsum=0;
 
-				while (pom1 < a.Length && a[pom] == a[pom1])
+				while (pom1 < a.Length && a[pom1] == 0)
 				{
 					pomsum++;
 					pom1++;
 				}
-				pom = pom + pomsum;
+				pom = pom + pomsum+1;
 
 
 				if (pomsum == 1)

@@ -48,6 +48,7 @@
 			this.btn10xAllTests = new System.Windows.Forms.Button();
 			this.btnTestDlugiejSerii = new System.Windows.Forms.Button();
 			this.btnTestPokerowy = new System.Windows.Forms.Button();
+			this.btnTestTilFound = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -240,11 +241,22 @@
 			this.btnTestPokerowy.UseVisualStyleBackColor = true;
 			this.btnTestPokerowy.Click += new System.EventHandler(this.btnTestPokerowy_Click);
 			// 
+			// btnTestTilFound
+			// 
+			this.btnTestTilFound.Location = new System.Drawing.Point(696, 275);
+			this.btnTestTilFound.Name = "btnTestTilFound";
+			this.btnTestTilFound.Size = new System.Drawing.Size(75, 23);
+			this.btnTestTilFound.TabIndex = 8;
+			this.btnTestTilFound.Text = "TestTilFound";
+			this.btnTestTilFound.UseVisualStyleBackColor = true;
+			this.btnTestTilFound.Click += new System.EventHandler(this.btnTestTilFound_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnTestTilFound);
 			this.Controls.Add(this.btnTestPokerowy);
 			this.Controls.Add(this.btnTestDlugiejSerii);
 			this.Controls.Add(this.btn10xAllTests);
@@ -283,6 +295,7 @@
 		private System.Windows.Forms.Button btn10xAllTests;
 		private System.Windows.Forms.Button btnTestDlugiejSerii;
 		private System.Windows.Forms.Button btnTestPokerowy;
+		private System.Windows.Forms.Button btnTestTilFound;
 	}
 }
 

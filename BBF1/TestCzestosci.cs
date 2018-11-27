@@ -8,18 +8,14 @@ namespace BBF1
 {
 	class TestCzestosci
 	{
-		public int sum = 0;
-		public void Fuu(int[] a)
+		public ulong sum = 0;
+		public void Fuu(ulong[] a)
 		{
 			foreach (var c in a)
 			{
 				if (c == 1)
 				{
 					sum++;
-				}
-				else
-				{
-					sum--;
 				}
 			}
 		}

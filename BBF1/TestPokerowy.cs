@@ -28,7 +28,7 @@ namespace BBF1
 		public int suma1110 = 0;
 		public int suma1111 = 0;
 
-		public void Fuu(int[] a)
+		public void Fuu(ulong[] a)
 		{
 			int pom = 0;
 			while (pom < a.Length)
@@ -147,7 +147,7 @@ namespace BBF1
 			float a = 2.16f;
 			float b = 46.17f;
 
-			float x = 16 / 5000;
+			float x = 16/5000f;
 			float SUMA = suma0000 * suma0000 + suma0001 * suma0001 + suma0010 * suma0010 + suma0011 * suma0011 +
 						suma0100 * suma0100 + suma0101 * suma0101 + suma0110 * suma0110 + suma0111 * suma0111 +
 						suma1000 * suma1000 + suma1001 * suma1001 + suma1010 * suma1010 + suma1011 * suma1011 +

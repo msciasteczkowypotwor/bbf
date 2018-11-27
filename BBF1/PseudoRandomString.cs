@@ -8,10 +8,10 @@ namespace BBF1
 {
 	class PseudoRandomString
 	{
-		public int[] list = new int[20000];
-		public uint s;
-		public uint m;
-		public uint pom;
+		public ulong[] list = new ulong[20000];
+		public ulong s;
+		public ulong m;
+		public ulong pom;
 		public void GenerateString()
 		{
 			pom = (s * s) % m;
